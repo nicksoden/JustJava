@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        String priceMessage = "Amount due: "+ (quantity *5);
+        int price = calculatePrice();
+        String priceMessage = "Total: $" + price;
+        priceMessage = priceMessage + "\nThank you!";
         displayMessage(priceMessage);
 
     }
@@ -47,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Calculates the price of the order.
      *
-     * @param quantity is the number of cups of coffee ordered
+     * @return total price
      */
-    private int calculatePrice(int quantity) {
+    private int calculatePrice() {
         int price = quantity * 5;
         return price;
     }
