@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
         boolean hasChocolate = chocolateCheckBox.isChecked();
 
+
         EditText editText = (EditText) findViewById(R.id.edit_text_name);
         String editTextName = editText.getText().toString();
 
